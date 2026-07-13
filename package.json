@@ -1,14 +1,30 @@
 {
-  "name": "bluespacelabs",
+  "name": "playwright-testdino-github-actions-example",
+  "version": "1.0.0",
   "private": true,
+  "description": "Self-contained Playwright and TestDino example for GitHub Actions.",
   "scripts": {
-    "test:playwright": "playwright test",
-    "upload:testdino": "tdpw upload ./playwright-report --token=\"$TESTDINO_TOKEN\" --upload-html"
+    "test": "playwright test",
+    "test:ci": "playwright test",
+    "lint": "eslint . --ext .js,.ts",
+    "format": "prettier --write ."
   },
-  "dependencies": {
-    "tdpw": "^1.0.38"
-  },
+  "keywords": [
+    "playwright",
+    "testdino",
+    "github-actions",
+    "ci",
+    "e2e"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.54.0"
+    "@playwright/test": "^1.59.1",
+    "@typescript-eslint/parser": "^8.58.0",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.10.1",
+    "prettier": "^3.8.1",
+    "tdpw": "^1.0.33"
   }
 }
