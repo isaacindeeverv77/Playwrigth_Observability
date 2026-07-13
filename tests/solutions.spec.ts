@@ -1,0 +1,42 @@
+import { expect, test } from '@playwright/test';
+
+test('solutions page validations', async ({ page }) => {
+  await page.goto('/solutions');
+
+  await page.getByRole('dialog').click();
+  await expect(page.getByText('Empowering Innovative')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Discover Our Solutions' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Discover our AI Solutions' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Driving Innovation through AI' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Enreach' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Unified Enterprise Messaging Suite' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Evolve' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Customer Engagement Enterprise Suite' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stratex' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'AI Platforms and Services' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Connect', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Next Gen IOT - M2M Platforms' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Healix' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Digital HealthCare Platforms' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Finaxis' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Fintech Transformations and' })).toBeVisible();
+  await expect(page.locator('#wrap')).toContainText('Foundational Services');
+  await expect(page.getByRole('heading', { name: 'Build and DevOps' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Consulting and Strategy' })).toBeVisible();
+  await expect(page.locator('#wrap')).toContainText('Everything you need');
+  await expect(page.getByRole('heading', { name: 'Reliability' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Performance' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Scalability' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Telecom' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Banking' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Utilities' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'GovTech' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Automotive' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'HealthCare' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Airlines' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Hospitality' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'E-Commerce' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'IT Solutions' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Education' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Agriculture' })).toBeVisible();
+});
